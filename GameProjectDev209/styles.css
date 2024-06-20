@@ -1,0 +1,14 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; /* Assuming space theme */
+}
+
+canvas {
+    border: 1px solid #fff;
+    background: url('images/background.png') no-repeat center center;
+    background-size: cover;  /* Ensures the background covers the entire canvas */
+}
