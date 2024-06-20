@@ -4,11 +4,11 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000; /* Assuming space theme */
+    background: #000; 
 }
 
 canvas {
     border: 1px solid #fff;
     background: url('images/background.png') no-repeat center center;
-    background-size: cover;  /* Ensures the background covers the entire canvas */
+    background-size: cover;  
 }

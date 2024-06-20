@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     canvas.width = 1000;
     canvas.height = 1000;
 
-    // Load sound files
+    
     let rescueSound = new Audio("sounds/rescue.mp3");
     let hitSound = new Audio("sounds/hit.mp3");
 
-    // Load images
+    
     let shipImage = new Image();
     let astroImage = new Image();
     let enemyImage = new Image();
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     astroImage.src = 'images/astro.png';
     enemyImage.src = 'images/enemy_ship.png';
 
-    let ship = { speed: 200, x: canvas.width / 120, y: canvas.height - 100 }; // Increased speed to 10
+    let ship = { speed: 200, x: canvas.width / 120, y: canvas.height - 100 }; 
     let astro = { x: Math.random() * (canvas.width - 32), y: 100 };
     let enemies = [];
     let numEnemies = 5;
@@ -48,16 +48,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }, false);
 
     function update(delta) {
-        if (keysDown['a'] && ship.x > 0) { // 'A' key for moving left
+        if (keysDown['a'] && ship.x > 0) { 
             ship.x -= ship.speed * delta;
         }
-        if (keysDown['d'] && ship.x < canvas.width - shipImage.width) { // 'D' key for moving right
-            ship.x += ship.speed * delta;
+        if (keysDown['d'] && ship.x < canvas.width - shipImage.width) { 
         }
-        if (keysDown['w'] && ship.y > 0) { // 'W' key for moving up
+        if (keysDown['w'] && ship.y > 0) { 
             ship.y -= ship.speed * delta;
         }
-        if (keysDown['s'] && ship.y < canvas.height - shipImage.height) { // 'S' key for moving down
+        if (keysDown['s'] && ship.y < canvas.height - shipImage.height) { 
             ship.y += ship.speed * delta;
         }
 
@@ -111,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let then = Date.now();
     function main() {
         let now = Date.now();
-        let delta = (now - then) / 1000; // convert to seconds
+        let delta = (now - then) / 1000; 
         update(delta);
         render();
         then = now;
